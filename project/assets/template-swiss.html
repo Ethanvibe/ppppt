@@ -1835,7 +1835,17 @@
     .slide:not(.active){pointer-events:auto}
     .slide:last-child{page-break-after:auto;break-after:auto}
     [contenteditable="true"]{box-shadow:none!important}
+    #wechat-badge{position:fixed!important;right:32px!important;bottom:32px!important;z-index:9999!important;display:flex!important}
   }
+
+  /* ========== WeChat contact badge ========== */
+  #wechat-badge{position:fixed;right:32px;bottom:32px;z-index:200;display:flex;align-items:center;gap:8px;padding:6px 14px 6px 6px;border-radius:40px;background:rgba(7,193,96,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 4px 16px rgba(0,0,0,.18);cursor:default;transition:transform .2s ease,box-shadow .2s ease;pointer-events:none}
+  #wechat-badge:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.25)}
+  #wechat-badge .wb-avatar{width:32px;height:32px;border-radius:50%;overflow:hidden;flex-shrink:0;background:#fff;display:flex;align-items:center;justify-content:center}
+  #wechat-badge .wb-avatar svg{width:28px;height:28px}
+  #wechat-badge .wb-info{display:flex;flex-direction:column;line-height:1.2}
+  #wechat-badge .wb-label{font-size:10px;color:rgba(255,255,255,.8);letter-spacing:.02em}
+  #wechat-badge .wb-id{font-size:13px;font-weight:600;color:#fff;letter-spacing:.01em}
 
 </style>
 </head>
@@ -1890,6 +1900,40 @@
 <!-- Generated slides are injected here by scripts/render-deck.jsx. -->
 
 </div>
+</div>
+<div id="wechat-badge" aria-label="添加作者微信 Roooxo">
+  <div class="wb-avatar">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <g transform="rotate(-15 50 50)">
+        <!-- face -->
+        <ellipse cx="50" cy="55" rx="32" ry="28" fill="#f5a623"/>
+        <!-- left ear -->
+        <polygon points="22,32 18,8 38,26" fill="#f5a623"/>
+        <polygon points="24,30 21,14 35,27" fill="#ffb8d0"/>
+        <!-- right ear -->
+        <polygon points="78,32 82,8 62,26" fill="#f5a623"/>
+        <polygon points="76,30 79,14 65,27" fill="#ffb8d0"/>
+        <!-- eyes -->
+        <ellipse cx="38" cy="50" rx="5" ry="6" fill="#333"/>
+        <ellipse cx="62" cy="50" rx="5" ry="6" fill="#333"/>
+        <circle cx="36" cy="48" r="1.8" fill="#fff"/>
+        <circle cx="60" cy="48" r="1.8" fill="#fff"/>
+        <!-- nose -->
+        <ellipse cx="50" cy="60" rx="3" ry="2.2" fill="#e88ca5"/>
+        <!-- mouth -->
+        <path d="M44 64 Q50 70 56 64" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- whiskers -->
+        <line x1="18" y1="52" x2="34" y2="56" stroke="#333" stroke-width="1" stroke-linecap="round"/>
+        <line x1="18" y1="60" x2="34" y2="60" stroke="#333" stroke-width="1" stroke-linecap="round"/>
+        <line x1="66" y1="56" x2="82" y2="52" stroke="#333" stroke-width="1" stroke-linecap="round"/>
+        <line x1="66" y1="60" x2="82" y2="60" stroke="#333" stroke-width="1" stroke-linecap="round"/>
+      </g>
+    </svg>
+  </div>
+  <div class="wb-info">
+    <span class="wb-label">添加微信</span>
+    <span class="wb-id">Roooxo</span>
+  </div>
 </div>
 <div id="deck-page-pager" aria-label="页面导航">
   <button id="deck-page-prev" type="button" aria-label="上一页" title="上一页">
