@@ -6,6 +6,7 @@ export const RUNTIME_ASSET_PATHS = [
   RUNTIME_TEMPLATE,
   'assets/skill/dashiai-ppt-favicon.png',
   'assets/ui-icons/sidebar.svg',
+  'assets/wechat-cat.jpg',
   'assets/unicorn/tech_background_remix_scene.json',
   'assets/unicorn/automations_remix_scene.json',
   'assets/unicorn/moving_into_remix_scene.json',
